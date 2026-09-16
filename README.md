@@ -67,3 +67,28 @@ Experiments run on the **Vaswani** corpus from `ir_datasets` via `python-terrier
 
 ```bash
 pip install wordninja pyterrier python-terrier ir_measures polars pandas nltk matplotlib seaborn
+```
+### Quick Start
+
+```python
+import pyterrier as pt
+import pandas as pd
+
+# 1. Initialize PyTerrier & load Vaswani dataset
+dataset = pt.get_dataset('irds:vaswani')
+df_docs = pd.DataFrame(list(dataset.get_corpus_iter()))
+df_queries = dataset.get_topics()
+
+# 2. Tokenize & clean
+df_docs["tokens"] = df_docs["text"].apply(preprocess)
+
+# 3. Build index
+lexicon, inv, doc_index, direct_index, stats = build_index(df_docs)
+
+# 4. Instantiate search engine
+ir_index = InvertedIndex(lexicon, inv, doc_index, direct_index, stats, k=1.2, b=0.75)
+
+# 5. Query the index (DAAT top-10)
+results = retrieve_query_results("digital computer logic circuits", ir_index, heap_size=10)
+print(results)  # [(score, docid), ...]
+```
