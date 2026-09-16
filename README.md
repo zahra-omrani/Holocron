@@ -92,3 +92,12 @@ ir_index = InvertedIndex(lexicon, inv, doc_index, direct_index, stats, k=1.2, b=
 results = retrieve_query_results("digital computer logic circuits", ir_index, heap_size=10)
 print(results)  # [(score, docid), ...]
 ```
+### Benchmark Results
+
+Aggregated performance metrics across the 93 benchmark queries using `ir_measures`[cite: 1]:
+
+| Metric | Score | Description |
+| :--- | :--- | :--- |
+| **P@5** | **0.4581** | ~46% of retrieved documents in top-5 ranks are relevant.[cite: 1] |
+| **nDCG@10** | **0.4379** | Moderate ranking gain and document position discounting.[cite: 1] |
+| **AP** | **0.1656** | Mean average precision across all recall cutoffs.[cite: 1] |
