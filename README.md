@@ -33,7 +33,8 @@ Raw Query / Documents
         │
         ▼
 [TREC Evaluation] ──────► ir_measures (P@5, nDCG@10, AP)
-
+```
+---
 ### BM25 Scoring Model
 
 Relevance scores for matched query terms are calculated using the BM25 model:
