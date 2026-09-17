@@ -1,6 +1,6 @@
 # Holocron: Custom Information Retrieval System
 
-This notebook, titled "Tintinify", is an information retrieval system. The name was inspired by the curious and adventurous spirit of Tintin implementing custom text preprocessing, lexicon generation, inverted and direct indexing, BM25 scoring, and Document-At-A-Time (DAAT) candidate traversal. Evaluated against the **Vaswani** corpus using standard TREC benchmarks.
+This notebook, titled "Holocron", is an information retrieval system. Inspired by the ancient, knowledge-storing artifacts of the Star Wars universe, Holocron implements custom text preprocessing, lexicon generation, inverted and direct indexing, BM25 scoring, and Document-At-A-Time (DAAT) candidate traversal[cite: 1]. Evaluated against the Vaswani corpus using standard TREC benchmarks[cite: 1].
 
 ---
 
