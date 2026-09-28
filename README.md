@@ -44,22 +44,22 @@ $$\text{BM25}(i) = \log\left(\frac{N}{\text{df}_i}\right) \times \frac{\text{tf}
 * Default parameters: $K = 1.2$, $B = 0.75$
 * $N$: Total collection document count
 * $\text{df}_i$: Document frequency for term $i$
-* $\text{tf}_i$: Within-document term frequency[cite: 1]
-* $\text{dl}_i$: Document length; $\text{avgdl}$: Average collection length[cite: 1]
+* $\text{tf}_i$: Within-document term frequency
+* $\text{dl}_i$: Document length; $\text{avgdl}$: Average collection length
 
 ---
 
 ### Dataset Specifications
 
-Experiments run on the **Vaswani** corpus from `ir_datasets` via `python-terrier`[cite: 1]:
+Experiments run on the **Vaswani** corpus from `ir_datasets` via `python-terrier`:
 
 | Property | Value |
 | :--- | :--- |
-| **Corpus** | 11,429 scientific abstracts[cite: 1] |
-| **Lexicon Size** | 7,638 unique terms[cite: 1] |
-| **Total Tokens** | 291,789 tokens[cite: 1] |
-| **Queries** | 93 natural language queries[cite: 1] |
-| **Qrels** | 2,083 relevance assessments[cite: 1] |
+| **Corpus** | 11,429 scientific abstracts|
+| **Lexicon Size** | 7,638 unique terms[|
+| **Total Tokens** | 291,789 tokens |
+| **Queries** | 93 natural language queries |
+| **Qrels** | 2,083 relevance assessments |
 
 ---
 
@@ -98,6 +98,6 @@ Aggregated performance metrics across the 93 benchmark queries using `ir_measure
 
 | Metric | Score | Description |
 | :--- | :--- | :--- |
-| **P@5** | **0.4581** | ~46% of retrieved documents in top-5 ranks are relevant.[cite: 1] |
-| **nDCG@10** | **0.4379** | Moderate ranking gain and document position discounting.[cite: 1] |
-| **AP** | **0.1656** | Mean average precision across all recall cutoffs.[cite: 1] |
+| **P@5** | **0.4581** | ~46% of retrieved documents in top-5 ranks are relevant.|
+| **nDCG@10** | **0.4379** | Moderate ranking gain and document position discounting.|
+| **AP** | **0.1656** | Mean average precision across all recall cutoffs.|
