@@ -94,7 +94,7 @@ print(results)  # [(score, docid), ...]
 ```
 ### Benchmark Results
 
-Aggregated performance metrics across the 93 benchmark queries using `ir_measures`[cite: 1]:
+Aggregated performance metrics across the 93 benchmark queries using `ir_measures`:
 
 | Metric | Score | Description |
 | :--- | :--- | :--- |
